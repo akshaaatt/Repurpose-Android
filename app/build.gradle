@@ -6,7 +6,7 @@ plugins {
 android {
     compileSdkVersion 31
     defaultConfig {
-        applicationId "com.limerse.repurpose"
+        applicationId "com.aemerse.repurpose"
         minSdkVersion 21
         targetSdkVersion 31
         multiDexEnabled true
