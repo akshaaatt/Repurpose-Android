@@ -45,7 +45,7 @@ class ProductCategoryLoaderTask(private val recyclerView: RecyclerView?, private
 
     override fun doInBackground(vararg p0: String?): Void? {
         try {
-            Thread.sleep(3000)
+            Thread.sleep(1000)
         } catch (e: InterruptedException) {
             e.printStackTrace()
         }
