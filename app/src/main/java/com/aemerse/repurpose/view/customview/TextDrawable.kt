@@ -1,4 +1,3 @@
-
 package com.aemerse.repurpose.view.customview
 
 import android.graphics.*
@@ -7,10 +6,6 @@ import android.graphics.drawable.shapes.OvalShape
 import android.graphics.drawable.shapes.RectShape
 import android.graphics.drawable.shapes.RoundRectShape
 
-/**
- * @author amulya
- * @datetime 14 Oct 2014, 3:53 PM
- */
 class TextDrawable private constructor(builder: Builder) : ShapeDrawable(builder.shape) {
     private val textPaint: Paint
     private val borderPaint: Paint

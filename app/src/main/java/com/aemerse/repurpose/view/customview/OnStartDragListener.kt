@@ -1,4 +1,3 @@
-
 package com.aemerse.repurpose.view.customview
 
 import androidx.recyclerview.widget.RecyclerView

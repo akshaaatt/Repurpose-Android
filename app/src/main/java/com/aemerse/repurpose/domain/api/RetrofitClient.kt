@@ -1,6 +1,6 @@
 package com.aemerse.repurpose.domain.api
 
-import com.aemerse.repurpose.utils.BASE_URL
+import com.aemerse.repurpose.view.customview.BASE_URL
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

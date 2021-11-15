@@ -1,4 +1,4 @@
-package com.aemerse.repurpose.utils
+package com.aemerse.repurpose.view.customview
 
 import android.app.Activity
 import android.content.ContentResolver

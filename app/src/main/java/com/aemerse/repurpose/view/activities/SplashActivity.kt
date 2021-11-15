@@ -15,7 +15,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.aemerse.repurpose.R
 import com.aemerse.repurpose.model.Token
 import com.aemerse.repurpose.domain.api.RetrofitClient
-import com.aemerse.repurpose.utils.sharedPrefFile
+import com.aemerse.repurpose.view.customview.sharedPrefFile
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
