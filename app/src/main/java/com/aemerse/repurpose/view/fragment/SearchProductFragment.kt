@@ -19,7 +19,7 @@ import com.aemerse.repurpose.model.entities.Product
 import com.aemerse.repurpose.util.Utils
 import com.aemerse.repurpose.util.Utils.AnimationType
 import com.aemerse.repurpose.util.Utils.switchContent
-import com.aemerse.repurpose.view.activities.ECartHomeActivity
+import com.aemerse.repurpose.view.activities.HomeActivity
 import java.util.*
 
 class SearchProductFragment : Fragment() {
@@ -82,7 +82,7 @@ class SearchProductFragment : Fragment() {
                 switchContent(
                     R.id.frag_container,
                     Utils.HOME_FRAGMENT,
-                    (context as ECartHomeActivity?)!!,
+                    (context as HomeActivity?)!!,
                     AnimationType.SLIDE_DOWN
                 )
             }

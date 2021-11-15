@@ -9,21 +9,21 @@ import com.aemerse.repurpose.domain.mock.FakeWebServer.Companion.fakeWebServer
 import com.aemerse.repurpose.util.AppConstants
 import com.aemerse.repurpose.util.Utils
 import com.aemerse.repurpose.util.Utils.AnimationType
-import com.aemerse.repurpose.view.activities.ECartHomeActivity
+import com.aemerse.repurpose.view.activities.HomeActivity
 import com.aemerse.repurpose.view.adapter.CategoryListAdapter
 import com.aemerse.repurpose.view.fragment.ProductOverviewFragment
 
 class ProductCategoryLoaderTask(private val recyclerView: RecyclerView?, private val context: Context) : AsyncTask<String?, Void?, Void?>() {
     override fun onPreExecute() {
         super.onPreExecute()
-        if (null != (context as ECartHomeActivity).progressBar){
+        if (null != (context as HomeActivity).progressBar){
             context.progressBar!!.visibility = View.VISIBLE
         }
     }
 
     override fun onPostExecute(result: Void?) {
         super.onPostExecute(result)
-        if (null != (context as ECartHomeActivity).progressBar){
+        if (null != (context as HomeActivity).progressBar){
             context.progressBar!!.visibility = View.GONE
         }
         if (recyclerView != null) {

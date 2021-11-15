@@ -11,7 +11,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.aemerse.repurpose.R
-import com.aemerse.repurpose.view.activities.ECartHomeActivity
+import com.aemerse.repurpose.view.activities.HomeActivity
 import com.limerse.slider.ImageCarousel
 import com.limerse.slider.listener.CarouselListener
 import com.limerse.slider.model.CarouselGravity
@@ -29,18 +29,18 @@ class SellerProfileFragment : Fragment() {
         mToolbar = rootView.findViewById<View>(R.id.htab_toolbar) as Toolbar
         carousel1 = rootView.findViewById<View>(R.id.carousel1) as ImageCarousel
         if (mToolbar != null) {
-            (activity as ECartHomeActivity?)!!.setSupportActionBar(mToolbar)
+            (activity as HomeActivity?)!!.setSupportActionBar(mToolbar)
         }
         if (mToolbar != null) {
-            (activity as ECartHomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+            (activity as HomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
             mToolbar!!.setNavigationIcon(R.drawable.ic_drawer)
         }
         mToolbar!!.setTitleTextColor(Color.WHITE)
         mToolbar!!.title = "aemerse"
         mToolbar!!.setNavigationOnClickListener {
-            (activity as ECartHomeActivity?)!!.getmDrawerLayout()!!.openDrawer(GravityCompat.START)
+            (activity as HomeActivity?)!!.getmDrawerLayout()!!.openDrawer(GravityCompat.START)
         }
-        (activity as ECartHomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        (activity as HomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         fetchLocalData()
         return rootView

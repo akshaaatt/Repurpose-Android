@@ -18,7 +18,7 @@ import com.aemerse.repurpose.model.CenterRepository.Companion.centerRepository
 import com.aemerse.repurpose.model.entities.Money.Companion.rupees
 import com.aemerse.repurpose.model.entities.Product
 import com.aemerse.repurpose.util.Utils.vibrate
-import com.aemerse.repurpose.view.activities.ECartHomeActivity
+import com.aemerse.repurpose.view.activities.HomeActivity
 import com.aemerse.repurpose.view.customview.TextDrawable
 import com.aemerse.repurpose.view.customview.TextDrawable.IBuilder
 import java.math.BigDecimal
@@ -158,8 +158,8 @@ class ProductListAdapter(subcategoryKey: String?, context: Context, isCartlist: 
         }
     }
 
-    private fun getContext(): ECartHomeActivity {
-        return context as ECartHomeActivity
+    private fun getContext(): HomeActivity {
+        return context as HomeActivity
     }
 
     override fun getItemCount(): Int {

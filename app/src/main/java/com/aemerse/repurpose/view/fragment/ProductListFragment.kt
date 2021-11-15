@@ -13,7 +13,7 @@ import com.aemerse.repurpose.R
 import com.aemerse.repurpose.util.Utils
 import com.aemerse.repurpose.util.Utils.AnimationType
 import com.aemerse.repurpose.util.Utils.switchFragmentWithAnimation
-import com.aemerse.repurpose.view.activities.ECartHomeActivity
+import com.aemerse.repurpose.view.activities.HomeActivity
 import com.aemerse.repurpose.view.adapter.ProductListAdapter
 
 class ProductListFragment : Fragment {
@@ -44,7 +44,7 @@ class ProductListFragment : Fragment {
                     switchFragmentWithAnimation(
                         R.id.frag_container,
                         HomeFragment(),
-                        (context as ECartHomeActivity?)!!, Utils.HOME_FRAGMENT,
+                        (context as HomeActivity?)!!, Utils.HOME_FRAGMENT,
                         AnimationType.SLIDE_DOWN
                     )
                     false
@@ -69,7 +69,7 @@ class ProductListFragment : Fragment {
                 switchFragmentWithAnimation(
                     R.id.frag_container,
                     ProductDetailsFragment(subcategoryKey, position, false),
-                    (context as ECartHomeActivity?)!!, null,
+                    (context as HomeActivity?)!!, null,
                     AnimationType.SLIDE_LEFT
                 )
             }
@@ -83,7 +83,7 @@ class ProductListFragment : Fragment {
                 switchFragmentWithAnimation(
                     R.id.frag_container,
                     HomeFragment(),
-                    (context as ECartHomeActivity?)!!, Utils.HOME_FRAGMENT,
+                    (context as HomeActivity?)!!, Utils.HOME_FRAGMENT,
                     AnimationType.SLIDE_UP
                 )
             }

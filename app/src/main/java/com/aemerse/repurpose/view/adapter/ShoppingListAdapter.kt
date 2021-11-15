@@ -21,7 +21,7 @@ import com.aemerse.repurpose.model.CenterRepository.Companion.centerRepository
 import com.aemerse.repurpose.model.entities.Money.Companion.rupees
 import com.aemerse.repurpose.model.entities.Product
 import com.aemerse.repurpose.util.Utils.vibrate
-import com.aemerse.repurpose.view.activities.ECartHomeActivity
+import com.aemerse.repurpose.view.activities.HomeActivity
 import com.aemerse.repurpose.view.adapter.ShoppingListAdapter.ItemViewHolder
 import com.aemerse.repurpose.view.customview.ItemTouchHelperAdapter
 import com.aemerse.repurpose.view.customview.ItemTouchHelperViewHolder
@@ -107,7 +107,7 @@ class ShoppingListAdapter(private val context: Context, private val mDragStartLi
                         ) - 1).toString()
                 holder.quanitity.text =
                     centerRepository!!.listOfProductsInShoppingList[position]!!.quantity
-                (context as ECartHomeActivity).updateCheckOutAmount(
+                (context as HomeActivity).updateCheckOutAmount(
                     BigDecimal.valueOf(
                         java.lang.Long.valueOf(
                             centerRepository!!.listOfProductsInShoppingList[position]!!.sellMRP
@@ -119,7 +119,7 @@ class ShoppingListAdapter(private val context: Context, private val mDragStartLi
                     centerRepository!!.listOfProductsInShoppingList[position]!!.quantity
                 ) == 1
             ) {
-                (context as ECartHomeActivity).updateItemCount(false)
+                (context as HomeActivity).updateItemCount(false)
                 context.updateCheckOutAmount(
                     BigDecimal.valueOf(
                         java.lang.Long.valueOf(
@@ -141,7 +141,7 @@ class ShoppingListAdapter(private val context: Context, private val mDragStartLi
     }
 
     override fun onItemDismiss(position: Int) {
-        (context as ECartHomeActivity).updateItemCount(false)
+        (context as HomeActivity).updateItemCount(false)
         context.updateCheckOutAmount(
             BigDecimal.valueOf(
                 java.lang.Long.valueOf(

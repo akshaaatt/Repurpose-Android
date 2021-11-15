@@ -14,7 +14,7 @@ import com.aemerse.repurpose.util.Utils
 import com.aemerse.repurpose.util.Utils.AnimationType
 import com.aemerse.repurpose.util.Utils.switchContent
 import com.aemerse.repurpose.util.Utils.switchFragmentWithAnimation
-import com.aemerse.repurpose.view.activities.ECartHomeActivity
+import com.aemerse.repurpose.view.activities.HomeActivity
 import com.aemerse.repurpose.view.adapter.ShoppingListAdapter
 import com.aemerse.repurpose.view.customview.OnStartDragListener
 import com.aemerse.repurpose.view.customview.SimpleItemTouchHelperCallback
@@ -34,7 +34,7 @@ class MyCartFragment : Fragment(), OnStartDragListener {
             switchFragmentWithAnimation(
                 R.id.frag_container,
                 HomeFragment(),
-                (context as ECartHomeActivity?)!!,
+                (context as HomeActivity?)!!,
                 Utils.HOME_FRAGMENT, AnimationType.SLIDE_DOWN
             )
             false
@@ -63,7 +63,7 @@ class MyCartFragment : Fragment(), OnStartDragListener {
                                 "", position,
                                 true
                             ),
-                            (context as ECartHomeActivity?)!!, null,
+                            (context as HomeActivity?)!!, null,
                             AnimationType.SLIDE_LEFT
                         )
                     }
@@ -80,7 +80,7 @@ class MyCartFragment : Fragment(), OnStartDragListener {
             switchContent(
                 R.id.frag_container,
                 Utils.HOME_FRAGMENT,
-                (context as ECartHomeActivity?)!!,
+                (context as HomeActivity?)!!,
                 AnimationType.SLIDE_UP
             )
         }
@@ -95,7 +95,7 @@ class MyCartFragment : Fragment(), OnStartDragListener {
                 switchContent(
                     R.id.frag_container,
                     Utils.HOME_FRAGMENT,
-                    (context as ECartHomeActivity?)!!,
+                    (context as HomeActivity?)!!,
                     AnimationType.SLIDE_UP
                 )
             }

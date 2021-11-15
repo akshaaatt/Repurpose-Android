@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.aemerse.repurpose.R
-import com.aemerse.repurpose.domain.PaymentSheetViewModel
 import com.aemerse.repurpose.model.CenterRepository.Companion.centerRepository
 import com.aemerse.repurpose.model.entities.Money.Companion.rupees
 import com.aemerse.repurpose.model.entities.Product
@@ -27,7 +26,7 @@ import java.math.BigDecimal
 import java.math.BigInteger
 import java.util.*
 
-class ECartHomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     var itemCount = 0
     private var checkoutAmount = BigDecimal(BigInteger.ZERO)
     private var mDrawerLayout: DrawerLayout? = null
@@ -66,7 +65,7 @@ class ECartHomeActivity : AppCompatActivity() {
             vibrate(applicationContext)
             switchContent(
                 R.id.frag_container,
-                Utils.SHOPPING_LIST_TAG, this@ECartHomeActivity,
+                Utils.SHOPPING_LIST_TAG, this@HomeActivity,
                 AnimationType.SLIDE_UP
             )
         }
@@ -83,7 +82,7 @@ class ECartHomeActivity : AppCompatActivity() {
             switchContent(
                 R.id.frag_container,
                 Utils.SHOPPING_LIST_TAG,
-                this@ECartHomeActivity, AnimationType.SLIDE_UP
+                this@HomeActivity, AnimationType.SLIDE_UP
             )
         }
         findViewById<View>(R.id.checkout).setOnClickListener {
@@ -114,7 +113,7 @@ class ECartHomeActivity : AppCompatActivity() {
                     switchContent(
                         R.id.frag_container,
                         Utils.HOME_FRAGMENT,
-                        this@ECartHomeActivity,
+                        this@HomeActivity,
                         AnimationType.SLIDE_LEFT
                     )
                     true
@@ -124,7 +123,7 @@ class ECartHomeActivity : AppCompatActivity() {
                     switchContent(
                         R.id.frag_container,
                         Utils.CONTACT_US_FRAGMENT,
-                        this@ECartHomeActivity,
+                        this@HomeActivity,
                         AnimationType.SLIDE_LEFT
                     )
                     true
@@ -134,7 +133,7 @@ class ECartHomeActivity : AppCompatActivity() {
                     switchContent(
                         R.id.frag_container,
                         Utils.SETTINGS_FRAGMENT_TAG,
-                        this@ECartHomeActivity,
+                        this@HomeActivity,
                         AnimationType.SLIDE_LEFT
                     )
                     true

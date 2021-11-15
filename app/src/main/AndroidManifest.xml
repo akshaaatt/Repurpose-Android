@@ -16,7 +16,7 @@
 
         <!-- Single Activity Model-->
         <activity
-            android:name="com.aemerse.repurpose.view.activities.ECartHomeActivity"
+            android:name="com.aemerse.repurpose.view.activities.HomeActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
 

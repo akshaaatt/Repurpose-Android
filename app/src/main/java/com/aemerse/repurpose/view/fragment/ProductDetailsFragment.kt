@@ -18,7 +18,7 @@ import com.aemerse.repurpose.util.Utils
 import com.aemerse.repurpose.util.Utils.AnimationType
 import com.aemerse.repurpose.util.Utils.switchContent
 import com.aemerse.repurpose.util.Utils.vibrate
-import com.aemerse.repurpose.view.activities.ECartHomeActivity
+import com.aemerse.repurpose.view.activities.HomeActivity
 import com.aemerse.repurpose.view.adapter.SimilarProductsPagerAdapter
 import com.aemerse.repurpose.view.customview.*
 import com.aemerse.repurpose.view.customview.TextDrawable.IBuilder
@@ -43,10 +43,10 @@ class ProductDetailsFragment(private val subcategoryKey: String?, private var pr
         val rootView = inflater.inflate(R.layout.frag_product_detail, container, false)
         mToolbar = rootView.findViewById<View>(R.id.htab_toolbar) as Toolbar
         if (mToolbar != null) {
-            (activity as ECartHomeActivity?)!!.setSupportActionBar(mToolbar)
+            (activity as HomeActivity?)!!.setSupportActionBar(mToolbar)
         }
         if (mToolbar != null) {
-            (activity as ECartHomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+            (activity as HomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
             mToolbar!!.setNavigationIcon(R.drawable.ic_drawer)
         }
         mToolbar!!.setTitleTextColor(Color.WHITE)
@@ -54,7 +54,7 @@ class ProductDetailsFragment(private val subcategoryKey: String?, private var pr
             Utils.switchFragmentWithAnimation(
                 R.id.frag_container,
                 SellerProfileFragment(),
-                (context as ECartHomeActivity?)!!, null,
+                (context as HomeActivity?)!!, null,
                 AnimationType.SLIDE_LEFT
             )
         }
@@ -62,11 +62,11 @@ class ProductDetailsFragment(private val subcategoryKey: String?, private var pr
             Utils.switchFragmentWithAnimation(
                 R.id.frag_container,
                 SellerProfileFragment(),
-                (context as ECartHomeActivity?)!!, null,
+                (context as HomeActivity?)!!, null,
                 AnimationType.SLIDE_LEFT
             )
         }
-        (activity as ECartHomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        (activity as HomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         similarProductsPager = rootView
             .findViewById<View>(R.id.similar_products_pager) as ClickableViewPager
         topSellingPager = rootView
@@ -95,7 +95,7 @@ class ProductDetailsFragment(private val subcategoryKey: String?, private var pr
                 vibrate((activity)!!)
 
                 //Update checkout amount on screen
-                (activity as ECartHomeActivity?)!!.updateCheckOutAmount(
+                (activity as HomeActivity?)!!.updateCheckOutAmount(
                     BigDecimal.valueOf(
                         java.lang.Long
                             .valueOf(
@@ -124,7 +124,7 @@ class ProductDetailsFragment(private val subcategoryKey: String?, private var pr
                     // increase quantity of current item in shopping
                     // list
                     if (tempObj.quantity.toInt() == 0) {
-                        (context as ECartHomeActivity?)!!.updateItemCount(true)
+                        (context as HomeActivity?)!!.updateItemCount(true)
                     }
 
                     // update quanity in shopping list
@@ -136,7 +136,7 @@ class ProductDetailsFragment(private val subcategoryKey: String?, private var pr
                         ) + 1).toString()
 
                     // update checkout amount
-                    (context as ECartHomeActivity?)!!.updateCheckOutAmount(
+                    (context as HomeActivity?)!!.updateCheckOutAmount(
                         BigDecimal.valueOf(
                             java.lang.Long
                                 .valueOf(
@@ -145,10 +145,10 @@ class ProductDetailsFragment(private val subcategoryKey: String?, private var pr
                         ), true
                     )
                 } else {
-                    (context as ECartHomeActivity?)!!.updateItemCount(true)
+                    (context as HomeActivity?)!!.updateItemCount(true)
                     tempObj.quantity = 1.toString()
                     centerRepository!!.listOfProductsInShoppingList.add(tempObj)
-                    (context as ECartHomeActivity?)!!.updateCheckOutAmount(
+                    (context as HomeActivity?)!!.updateCheckOutAmount(
                         BigDecimal.valueOf(java.lang.Long.valueOf(centerRepository!!.getMapOfProductsInCategory()[subcategoryKey]!!.get(productListNumber)!!.sellMRP)), true
                     )
                 }
@@ -255,14 +255,14 @@ class ProductDetailsFragment(private val subcategoryKey: String?, private var pr
                     switchContent(
                         R.id.frag_container,
                         Utils.SHOPPING_LIST_TAG,
-                        (((activity) as ECartHomeActivity?)!!),
+                        (((activity) as HomeActivity?)!!),
                         AnimationType.SLIDE_UP
                     )
                 } else {
                     switchContent(
                         R.id.frag_container,
                         Utils.PRODUCT_OVERVIEW_FRAGMENT_TAG,
-                        (((activity) as ECartHomeActivity?)!!),
+                        (((activity) as HomeActivity?)!!),
                         AnimationType.SLIDE_RIGHT
                     )
                 }

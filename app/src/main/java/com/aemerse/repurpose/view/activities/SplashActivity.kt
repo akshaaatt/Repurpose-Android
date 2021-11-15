@@ -44,7 +44,7 @@ class SplashActivity : AppCompatActivity() {
             signInToGoogle()
         }
         else{
-            startActivity(Intent(applicationContext, ECartHomeActivity::class.java))
+            startActivity(Intent(applicationContext, HomeActivity::class.java))
             Animations.animateQuick(this)
             finish()
         }

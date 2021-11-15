@@ -17,7 +17,7 @@ import com.aemerse.repurpose.R
 import com.aemerse.repurpose.util.Utils
 import com.aemerse.repurpose.util.Utils.AnimationType
 import com.aemerse.repurpose.util.Utils.switchContent
-import com.aemerse.repurpose.view.activities.ECartHomeActivity
+import com.aemerse.repurpose.view.activities.HomeActivity
 
 class ContactUsFragment : Fragment() {
     private var mToolbar: Toolbar? = null
@@ -30,14 +30,14 @@ class ContactUsFragment : Fragment() {
         requireActivity().title = "Contact Us"
         mToolbar = rootView.findViewById<View>(R.id.htab_toolbar) as Toolbar
         if (mToolbar != null) {
-            (activity as ECartHomeActivity?)!!.setSupportActionBar(mToolbar)
+            (activity as HomeActivity?)!!.setSupportActionBar(mToolbar)
         }
         if (mToolbar != null) {
-            (activity as ECartHomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+            (activity as HomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
             mToolbar!!.setNavigationIcon(R.drawable.ic_drawer)
         }
         mToolbar!!.setNavigationOnClickListener {
-            (activity as ECartHomeActivity?)!!.getmDrawerLayout()!!.openDrawer(GravityCompat.START)
+            (activity as HomeActivity?)!!.getmDrawerLayout()!!.openDrawer(GravityCompat.START)
         }
         mToolbar!!.setTitleTextColor(Color.WHITE)
         rootView.findViewById<View>(R.id.locations).setOnClickListener { }
@@ -55,7 +55,7 @@ class ContactUsFragment : Fragment() {
                 switchContent(
                     R.id.frag_container,
                     Utils.HOME_FRAGMENT,
-                    (context as ECartHomeActivity?)!!,
+                    (context as HomeActivity?)!!,
                     AnimationType.SLIDE_UP
                 )
             }

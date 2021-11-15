@@ -10,13 +10,12 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.google.android.material.tabs.TabLayout
 import com.aemerse.repurpose.R
 import com.aemerse.repurpose.domain.mock.FakeWebServer
 import com.aemerse.repurpose.model.CenterRepository
 import com.aemerse.repurpose.util.AppConstants
 import com.aemerse.repurpose.util.Utils
-import com.aemerse.repurpose.view.activities.ECartHomeActivity
+import com.aemerse.repurpose.view.activities.HomeActivity
 import com.aemerse.repurpose.view.adapter.ProductsInCategoryPagerAdapter
 
 class ProductOverviewFragment : Fragment() {
@@ -41,14 +40,14 @@ class ProductOverviewFragment : Fragment() {
         collapsingToolbarLayout!!.isTitleEnabled = false
         mToolbar = view.findViewById<View>(R.id.htab_toolbar) as Toolbar?
         if (mToolbar != null) {
-            (activity as ECartHomeActivity?)!!.setSupportActionBar(mToolbar)
+            (activity as HomeActivity?)!!.setSupportActionBar(mToolbar)
         }
         if (mToolbar != null) {
-            (activity as ECartHomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+            (activity as HomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
             mToolbar!!.setNavigationIcon(R.drawable.ic_drawer)
         }
         mToolbar!!.setNavigationOnClickListener {
-            (activity as ECartHomeActivity?)!!.getmDrawerLayout()!!.openDrawer(GravityCompat.START)
+            (activity as HomeActivity?)!!.getmDrawerLayout()!!.openDrawer(GravityCompat.START)
         }
         setUpUi()
         view.isFocusableInTouchMode = true
@@ -60,7 +59,7 @@ class ProductOverviewFragment : Fragment() {
                 Utils.switchContent(
                     R.id.frag_container,
                     Utils.HOME_FRAGMENT,
-                    ((context) as ECartHomeActivity?)!!,
+                    ((context) as HomeActivity?)!!,
                     Utils.AnimationType.SLIDE_RIGHT
                 )
             }

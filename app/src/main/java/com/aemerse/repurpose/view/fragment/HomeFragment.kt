@@ -18,7 +18,7 @@ import com.aemerse.repurpose.R
 import com.aemerse.repurpose.domain.api.ProductCategoryLoaderTask
 import com.aemerse.repurpose.util.Utils.AnimationType
 import com.aemerse.repurpose.util.Utils.switchFragmentWithAnimation
-import com.aemerse.repurpose.view.activities.ECartHomeActivity
+import com.aemerse.repurpose.view.activities.HomeActivity
 
 class HomeFragment : Fragment() {
     private var collapsingToolbar: CollapsingToolbarLayout? = null
@@ -37,16 +37,16 @@ class HomeFragment : Fragment() {
             switchFragmentWithAnimation(
                 R.id.frag_container,
                 SearchProductFragment(),
-                (activity as ECartHomeActivity?)!!, null,
+                (activity as HomeActivity?)!!, null,
                 AnimationType.SLIDE_UP
             )
         }
         val toolbar = view.findViewById<View>(R.id.anim_toolbar) as Toolbar
-        (activity as ECartHomeActivity?)!!.setSupportActionBar(toolbar)
-        (activity as ECartHomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        (activity as HomeActivity?)!!.setSupportActionBar(toolbar)
+        (activity as HomeActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         toolbar.setNavigationIcon(R.drawable.ic_drawer)
         toolbar.setNavigationOnClickListener {
-            (activity as ECartHomeActivity?)!!.getmDrawerLayout()!!.openDrawer(GravityCompat.START)
+            (activity as HomeActivity?)!!.getmDrawerLayout()!!.openDrawer(GravityCompat.START)
         }
         collapsingToolbar = view.findViewById<View>(R.id.collapsing_toolbar) as CollapsingToolbarLayout
         appBarLayout = view.findViewById<View>(R.id.appbar) as AppBarLayout
