@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
-        android:text="@string/myntra"
+        android:text="@string/aemerse"
         android:textColor="@color/white"
         android:textSize="@dimen/_14sdp"
         android:textStyle="normal"

@@ -22,7 +22,7 @@ import java.util.HashMap
 
 object Utils {
     const val ATTRIBUTE_TTF_KEY = "ttf_name"
-    const val ATTRIBUTE_SCHEMA = "http://schemas.android.com/apk/lib/com.myntra.repurpose.util"
+    const val ATTRIBUTE_SCHEMA = "http://schemas.android.com/apk/lib/com.aemerse.repurpose.util"
     const val SHOPPING_LIST_TAG = "SHoppingListFragment"
     const val PRODUCT_OVERVIEW_FRAGMENT_TAG = "ProductOverView"
     const val MY_CART_FRAGMENT = "MyCartFragment"

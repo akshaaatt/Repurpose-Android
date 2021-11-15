@@ -52,7 +52,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun signInToGoogle() {
         val signInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("709383810699-jv2l1dvel13kjsbmmqvqiduftqu8cjfm.apps.googleusercontent.com")
+            .requestIdToken("427177381185-vtljgc45c4uvge0k4vo6km7qneadi41o.apps.googleusercontent.com")
             .requestProfile()
             .requestEmail()
             .build()

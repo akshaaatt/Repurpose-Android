@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="3dp"
-                android:text="akshaaatt"
+                android:text="aemerse"
                 android:textSize="15sp"
                 android:textStyle="italic" />
         </LinearLayout>
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="3dp"
-                android:text="tiwariakshat03@gmail.com"
+                android:text="aemerse.dev@gmail.com"
 
                 android:textSize="15sp"
                 android:textStyle="italic" />
@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="3dp"
-                android:text="@string/site_myntra"
+                android:text="@string/site_aemerse"
 
                 android:textSize="15sp"
                 android:textStyle="italic" />
@@ -180,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="3dp"
-                android:text="@string/delhi"
+                android:text="@string/noida"
 
                 android:textSize="15sp"
                 android:textStyle="italic" />
@@ -216,7 +216,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="3dp"
-                android:text="@string/delhi"
+                android:text="@string/noida"
 
                 android:textSize="15sp"
                 android:textStyle="italic" />

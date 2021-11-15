@@ -119,16 +119,6 @@ class ECartHomeActivity : AppCompatActivity() {
                     )
                     true
                 }
-                R.id.my_cart -> {
-                    mDrawerLayout!!.closeDrawers()
-                    switchContent(
-                        R.id.frag_container,
-                        Utils.SHOPPING_LIST_TAG,
-                        this@ECartHomeActivity,
-                        AnimationType.SLIDE_LEFT
-                    )
-                    true
-                }
                 R.id.contact_us -> {
                     mDrawerLayout!!.closeDrawers()
                     switchContent(
@@ -204,7 +194,7 @@ class ECartHomeActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val merchantName = "REDALCK"
+        const val merchantName = "AEMERSE"
         const val backendUrl = "https://stripe-server-akshaaatt.herokuapp.com/checkout"
         val googlePayConfig = PaymentSheet.GooglePayConfiguration(
             environment = PaymentSheet.GooglePayConfiguration.Environment.Test,

@@ -19,9 +19,9 @@
     <string name="email_developer_">Email Developer:</string>
     <string name="personal_website_">Personal Website :</string>
     <string name="contact_number">Contact Number</string>
-    <string name="myntra">By Myntra</string>
-    <string name="site_myntra">www.myntra.com</string>
-    <string name="mob_num">8178215331</string>
-    <string name="lab_locations">Delhi Technological University, DTU, New Delhi, India</string>
-    <string name="delhi">Delhi</string>
+    <string name="aemerse">By Aemerse</string>
+    <string name="site_aemerse">www.aemerse.com</string>
+    <string name="mob_num">7011053325</string>
+    <string name="lab_locations">Noida</string>
+    <string name="noida">Noida</string>
 </resources>

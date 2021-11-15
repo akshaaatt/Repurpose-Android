@@ -36,7 +36,7 @@ class SellerProfileFragment : Fragment() {
             mToolbar!!.setNavigationIcon(R.drawable.ic_drawer)
         }
         mToolbar!!.setTitleTextColor(Color.WHITE)
-        mToolbar!!.title = "akshaaatt"
+        mToolbar!!.title = "aemerse"
         mToolbar!!.setNavigationOnClickListener {
             (activity as ECartHomeActivity?)!!.getmDrawerLayout()!!.openDrawer(GravityCompat.START)
         }
@@ -106,7 +106,7 @@ class SellerProfileFragment : Fragment() {
         val listOne = mutableListOf<CarouselItem>()
         val three = listOf(
             "https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=738&q=80" to "Anikash Says: \"The quality has been really great and totally loved shopping!\"",
-            "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2018&q=80" to "Shiva Says: \"With Myntra backing this product, I trusted it.\"",
+            "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2018&q=80" to "Shiva Says: \"With aemerse backing this product, I trusted it.\"",
             "https://images.unsplash.com/photo-1582897085656-c636d006a246?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" to "Divyansh Says: \"At first I didn't believe it. But again, Hey my new shoes!\"",
             "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1160&q=80" to "Anikash Says: \"Marvelous that my size is available!\"",
         )
