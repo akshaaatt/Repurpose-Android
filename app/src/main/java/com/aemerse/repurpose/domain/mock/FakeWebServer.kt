@@ -119,7 +119,7 @@ class FakeWebServer {
         }
 
     // Chair
-    val allFurnitures: Unit
+    private val allFurnitures: Unit
         get() {
             val productMap = ConcurrentHashMap<String, MutableList<Product?>>()
             var productlist = mutableListOf<Product?>()
