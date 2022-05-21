@@ -19,7 +19,6 @@ class PaymentSheetViewModel(application: Application) : AndroidViewModel(applica
     fun prepareCheckout(backendUrl: String) {
         inProgress.postValue(true)
 
-
         RetrofitClient(null).instance
             .stripeIntent(backendUrl)
             .enqueue(object: Callback<ResponseBody> {

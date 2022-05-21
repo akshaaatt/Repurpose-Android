@@ -12,13 +12,13 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.aemerse.repurpose.R
 import com.aemerse.repurpose.view.activities.HomeActivity
-import com.limerse.slider.ImageCarousel
-import com.limerse.slider.listener.CarouselListener
-import com.limerse.slider.model.CarouselGravity
-import com.limerse.slider.model.CarouselItem
-import com.limerse.slider.model.CarouselType
-import com.limerse.slider.utils.dpToPx
-import com.limerse.slider.utils.spToPx
+import com.aemerse.slider.ImageCarousel
+import com.aemerse.slider.listener.CarouselListener
+import com.aemerse.slider.model.CarouselGravity
+import com.aemerse.slider.model.CarouselItem
+import com.aemerse.slider.model.CarouselType
+import com.aemerse.slider.utils.dpToPx
+import com.aemerse.slider.utils.spToPx
 
 class SellerProfileFragment : Fragment() {
     private var mToolbar: Toolbar? = null

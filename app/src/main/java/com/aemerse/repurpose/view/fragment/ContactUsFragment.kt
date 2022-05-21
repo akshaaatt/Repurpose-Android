@@ -64,7 +64,7 @@ class ContactUsFragment : Fragment() {
         rootView.findViewById<View>(R.id.site_dev).setOnClickListener {
             val browserIntent = Intent(
                 Intent.ACTION_VIEW,
-                Uri.parse("https://limerse.com/")
+                Uri.parse("https://aemerse.com/")
             )
             startActivity(browserIntent)
         }

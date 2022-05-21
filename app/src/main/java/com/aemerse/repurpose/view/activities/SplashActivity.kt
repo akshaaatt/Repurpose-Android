@@ -8,7 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.limerse.animations.Animations
+import com.aemerse.animations.Animations
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -73,9 +73,8 @@ class SplashActivity : AppCompatActivity() {
         if (requestCode != signInCode) {
             return
         }
-        val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data) ?: return
+        val result = data?.let { Auth.GoogleSignInApi.getSignInResultFromIntent(it) } ?: return
         if (result.isSuccess) {
-
             RetrofitClient(null).instance
                 .login(result.signInAccount?.displayName!!,
                     result.signInAccount?.displayName!!,

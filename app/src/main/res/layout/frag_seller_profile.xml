@@ -21,7 +21,7 @@
             app:layout_scrollFlags="scroll|enterAlways|snap"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-        <com.limerse.slider.ImageCarousel
+        <com.aemerse.slider.ImageCarousel
             android:id="@+id/carousel1"
             android:layout_width="match_parent"
             android:layout_height="300dp"
